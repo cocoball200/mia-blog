@@ -20,7 +20,6 @@ const Home: NextPage = () => {
         <p className="mt-3 text-2xl">Hello, world</p>
         <Button type="primary">블로그 만들러 가기</Button>
       </main>
-
       <footer className="flex items-center justify-center w-full h-24 border-t">
         ahah
       </footer>
