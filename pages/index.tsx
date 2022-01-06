@@ -1,28 +1,26 @@
 import type { NextPage } from "next";
-import { Table } from "antd";
 import Head from "next/head";
-import "antd/dist/antd.css";
-import { Button } from "antd";
+
+const posts = [
+  { title: "getting started!", excerpt: "my brain", key: 1 },
+  { title: "OMG Too Much", excerpt: "my brain", key: 2 },
+];
 
 const Home: NextPage = () => {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen py-2 tw-bg-red-500">
+    <div className="container mx-auto px-10 mb-8 bg-gray-300 ">
       <Head>
-        <title>블로그 만드는중입니다</title>
+        <title> Mia BLOG</title>
         <link
           rel="icon"
           href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔥</text></svg>"
         />
       </Head>
-
-      <main className="flex flex-col items-center justify-center w-full flex-1 px-20 text-center">
-        <h1 className="text-6xl font-bold flex">Life Itself Climate Inquiry</h1>
-        <p className="mt-3 text-2xl">Hello, world</p>
-        <Button type="primary">블로그 만들러 가기</Button>
-      </main>
-      <footer className="flex items-center justify-center w-full h-24 border-t">
-        ahah
-      </footer>
+      <div className="grid girid-cols-1 lg:grid-cols-12 gap-12">
+        {posts.map((item) => {
+          return <div key={item.key}> {item.title}</div>;
+        })}
+      </div>
     </div>
   );
 };
